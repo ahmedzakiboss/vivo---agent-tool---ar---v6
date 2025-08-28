@@ -288,7 +288,8 @@ th{font-size:12px;color:#556}tfoot td{font-weight:bold}.muted{color:#66708a;font
       lastPlan = plan.filter(p=>p.add>0);
       UI.apply.style.display='inline-block';
     }catch(e){
-      UI.msg.textContent='—'; UI.apply.style.display='none';
+      if (UI.msg) UI.msg.textContent='—';
+      if (UI.apply) UI.apply.style.display='none';
     }
   }
 
